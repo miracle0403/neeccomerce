@@ -1,0 +1,17 @@
+{{> mainh}}
+<section class="main-content">
+	<div class="row">						
+		<div class="span9">
+			<div class="row">
+				<div class="span4">
+				{{#if products}}
+				{{#each products}}
+					<a href="/{{category}}/{{product_id}}/" class="thumbnail" data-fancybox-group="group1" title="Description 1"><img alt="{{product}}" src="{{image}}"></a>
+					{{/each}}
+					{{/if}}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>		
+{{> mainf}}

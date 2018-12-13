@@ -1,0 +1,58 @@
+{{>mainh}}
+
+<section  class="homepage-slider" id="home-slider">
+				<div class="flexslider">
+					<ul class="slides">
+						<li>
+							<img src="/themes/images/carousel/banner-1.jpg" alt="" />
+						</li>
+						<li>
+							<img src="themes/images/carousel/banner-2.jpg" alt="" />
+							<div class="intro">
+								<h1>Mid season sale</h1>
+								<p><span>Up to 50% Off</span></p>
+								<p><span>On selected items online and in stores</span></p>
+							</div>
+						</li>
+					</ul>
+				</div>			
+			</section>
+			<section class="header_text">
+				We stand for top quality templates. Our genuine developers always optimized bootstrap commercial templates. 
+				<br/>Don't miss to use our cheap abd best bootstrap templates.
+			</section>
+			<!--<div class ="row">-->
+			<section class="main-content">
+				
+				<div class="row">						
+					<div class="span9">
+						<ul class="thumbnails listing-products">
+						{{#if products}}
+						{{#each products}}
+							<li class="span3">
+								<div class="product-box">
+									<span class="sale_tag"></span>
+										<a href="/{{category}}/{{product_id}}/"><img src ="{{image}}" width ="400" height = "300" alt = "{{product}}"></a><br/>
+											<p>{{product}}</p>
+							<p class="price"> N{{price}}</p>
+						
+									
+								</div>
+							</li>
+							{{/each}}
+					{{/if}}
+						</ul>	
+					</div>
+				</div>
+			</section>	
+			<!--	<div class ="col-md-4">
+					
+							<img 
+						
+				</div>
+			</div>-->
+			<form method="post" action="/test"enctype="multipart/form-data">
+			<input type="file" name="filetoupload">
+			<input type="submit">
+			</form>
+{{>mainf}}
