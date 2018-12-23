@@ -23,7 +23,7 @@ function rounds( err, results ){
 	if ( err ) throw err;
 }
 const saltRounds = bcrypt.genSalt( 10, rounds);
-window.alert( '2+2 = 4' )
+
 var pool  = mysql.createPool({
   connectionLimit : 100,
   multipleStatements: true, 
@@ -31,7 +31,7 @@ var pool  = mysql.createPool({
   host: "localhost",
   user: "root",
   //password: 'swiftrevolver',
-  database: "newcommerce"
+  database: "kelidex"
 });
 /*var user = 'adminadmin';
 var email = 'mify1@yahoo.com';
@@ -44,12 +44,11 @@ reset.sendverify( user, email )*/
 /* GET home page. */
 router.get('/', function(req, res) {
   //get one from every category.
-  db.query( 'SELECT DISTINCT product_id, category, image, price, product FROM products WHERE status  = ? ORDER BY product_id', ['in stock'], function ( err, results, fields ){
+  /*db.query( 'SELECT DISTINCT product_id, category, image, price, product FROM products WHERE status  = ? ORDER BY product_id', ['in stock'], function ( err, results, fields ){
   		if ( err ) throw err; 
   		var products = results;
-  		//console.log( products)
-  		res.render('index', { title: 'ONLINE SHOP PROJECT', products: products});		
-  });
+  		//console.log( products)*/
+  		res.render('index', { title: 'ONLINE SHOP PROJECT'});		
 });
 
 //get product description

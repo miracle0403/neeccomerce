@@ -1,56 +1,79 @@
-<section id="footer-bar">
-				<div class="row">
-					<div class="span3">
-						<h4>Navigation</h4>
-						<ul class="nav">
-							<li><a href="./index.html">Homepage</a></li>  
-							<li><a href="./about.html">About Us</a></li>
-							<li><a href="./contact.html">Contac Us</a></li>
-							<li><a href="./cart.html">Your Cart</a></li>
-							<li><a href="./register.html">Login</a></li>							
-						</ul>					
-					</div>
-					<div class="span4">
-						<h4>My Account</h4>
-						<ul class="nav">
-							<li><a href="#">My Account</a></li>
-							<li><a href="#">Order History</a></li>
-							<li><a href="#">Wish List</a></li>
-							<li><a href="#">Newsletter</a></li>
-						</ul>
-					</div>
-					<div class="span5">
-						<p class="logo"><img src="themes/images/logo.png" class="site_logo" alt=""></p>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. the  Lorem Ipsum has been the industry's standard dummy text ever since the you.</p>
-						<br/>
-						<span class="social_icons">
-							<a class="facebook" href="#">Facebook</a>
-							<a class="twitter" href="#">Twitter</a>
-							<a class="skype" href="#">Skype</a>
-							<a class="vimeo" href="#">Vimeo</a>
-						</span>
-					</div>					
-				</div>	
-			</section>
-			<section id="copyright">
-				<span>Copyright 2013 bootstrappage template  All right reserved.</span>
-			</section>
-		</div>
-		<script src="themes/js/common.js"></script>
-		<script src="themes/js/jquery.flexslider-min.js"></script>
-		<script type="text/javascript">
-			$(function() {
-				$(document).ready(function() {
-					$('.flexslider').flexslider({
-						animation: "fade",
-						slideshowSpeed: 4000,
-						animationSpeed: 600,
-						controlNav: false,
-						directionNav: true,
-						controlsContainer: ".flex-container" // the container that holds the flexslider
-					});
-				});
-			});
-		</script>
-    </body>
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div id = "#contact" class="span5">
+        <h3>Contact Form</h3>
+        <div>         
+          <form class="form-main" name="contact" id="contact" action="/contact" method="post">
+           
+            <div class = "form-group">
+            <label for = "name">Full Name</label>
+            <input type="text" name="name" id="name" class = "form-control" placeholder ="Enter your name please" required/>
+         </div>   
+           <div class = "form-group">
+            <label for = "email">Email</label>
+            <input type="text" name="email" id="email" class = "form-control" placeholder ="Enter your email please" required/>
+         </div> 
+          <div class = "form-group">
+            <label for = "subject">Subject</label>
+            <input type="text" name="subject" id="subject" class = "form-control" placeholder ="Enter subject please" required/>
+         </div>   
+          <div class = "form-group">
+          	<textarea class ="form-control" name ="text" placeholder = "What do you want to talk to us about?" required/></textarea>
+          </div>  
+          <div class="form-group">
+          <button class = "btn btn-primary" class = "form-control" type= "submit">Submit</button> 
+          </div>
+          
+          </form>
+        </div>
+        </div>
+        <div class="span3 offset3">
+          <h3>Address</h3>
+          81 Sunnyvale Street<br>
+          Los Angeles, CA 90185<br>
+          United States<br>
+          <br>
+          <i class="icon-phone"></i>+01 880 555 999<br>
+          <i class="icon-envelope"></i><a href="mailto:support@example.com">support@example.com</a><br>
+          <i class="icon-home"></i><a href="#">www.example.com</a>
+          
+          <div class="row space40"></div>  
+
+          <a href="#" class="social-network sn2 behance"></a>
+          <a href="#" class="social-network sn2 facebook"></a>
+          <a href="#" class="social-network sn2 pinterest"></a>
+          <a href="#" class="social-network sn2 flickr"></a>
+          <a href="#" class="social-network sn2 dribbble"></a>
+          <a href="#" class="social-network sn2 lastfm"></a>
+          <a href="#" class="social-network sn2 forrst"></a>
+          <a href="#" class="social-network sn2 xing"></a>      
+        </div>
+      </div>
+      
+      <div class="row space50"></div>
+      <div class="row">
+        <div class="span6">
+          <div class="logo-footer">
+          copyright KELIDEX SUPRA GLOBAL SERVICES 2018-<script>document.write(new Date().getFullYear())</script>
+          </div>                       
+        </div>
+      <!--  <div class="span6 right">
+          &copy; 2020. All rights reserved.
+        </div>-->
+      </div>
+
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+  <!-- JavaScripts -->
+  <script type="text/javascript" src="/js/jquery-1.8.3.min.js"></script> 
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>  
+  <script type="text/javascript" src="/js/functions.js"></script>
+  <script type="text/javascript" defer src="js/jquery.flexslider.js"></script>
+
+</body>
 </html>
+  
