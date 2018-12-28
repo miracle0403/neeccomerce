@@ -1,49 +1,18 @@
-  <header id="header">
-    <div class="container">
-      <div class="row t-container">
-
-        <!-- Logo -->
-        <div class="span3">
-          <div class="logo">
-            <a href="/"><img src="/img/logo-header.png" alt="{{title}}"></a>
-          </div>            
-        </div>
-
-        <div class="span9">
-          <div class="row space60"></div>
-             <nav id="nav" role="navigation">
-               	<a href="#nav" title="Show navigation">Show navigation</a>
-	            <a href="#" title="Hide navigation">Hide navigation</a>
-	            <ul class="clearfix">
-	           	<li class="active"><a href="/" title="">Home</a></li>
-                <li><a href="/#about" title="">About Us</a></li>                
-                <li><a href="/faq" title="">FAQ</a></li>
-                <li><a href="/howitwork" title="">How It Works</a></li>
-                      <li><a href="/shop" title="">Shop</a></li>
-                     {{#if isAuthenticated}}
-                      <li><a href="/profile" title="">Profile</a></li>
-                      <li><a href="/logout" title="">Log Out</a></li>
-                      {{else}}
-                      <li><a href="/register" title="">Register</a></li>
-                <li><a href="/register" title="">Log In</a></li>      
-  		         </ul> <!-- End Submenu -->      
-               </li>
-               {{/if}}
-	           </ul>
-          </nav>
-         </div> 
-      </div> 
-      <div class = "container">
-      	<form method ="post" action = "/simplesearch/{{service}}">
-      		<div class = "form-group">
-      		<div class = "row">
-      		<div class = "col md-9">
-      			<input type = "text" class = "form-control" name = "service" required/>
-      			</div>
-      			<div class = "col md-3">
-      		<button type=  "submit" class = "form-control">Search</button>
-      			</div>
-      			</div>
-      		</div>
-      	</form>
-      </div>
+<header class = "container-fluid">
+<nav class="nav nav- nav-fill"> 
+<a class="nav-item nav-link" href="/">Home</a>
+<a class="nav-item nav-link" href="/#about">About Us</a>
+ <a class="nav-item nav-link" href="/faq">FAQ</a>
+ {{#if isAuthenticated}}
+ <a class="nav-item nav-link" href="/logout">Log Out</a>
+ <a class="nav-item nav-link" href="/dashboard">Dashboard</a>
+ {{else}}
+ <a class="nav-item nav-link" href="/register">Register</a>
+ <a class="nav-item nav-link" href="/login">Log In</a>
+ {{/if}}
+  <form method = "post" action = "/simplesearch/{{service}}" class="form-inline my-2 my-lg-0"> 
+ <input class="form-control mr-sm-2" type="search" name = "service" placeholder="Search" aria-label="Search">
+ <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+ </form>
+   </nav>
+   </header>

@@ -43,12 +43,7 @@ reset.sendverify( user, email )*/
 //console.log( admin ) 
 /* GET home page. */
 router.get('/', function(req, res) {
-  //get one from every category.
-  /*db.query( 'SELECT DISTINCT product_id, category, image, price, product FROM products WHERE status  = ? ORDER BY product_id', ['in stock'], function ( err, results, fields ){
-  		if ( err ) throw err; 
-  		var products = results;
-  		//console.log( products)*/
-  		res.render('index', { title: 'ONLINE SHOP PROJECT'});		
+	res.render('index', { title: 'ONLINE SHOP PROJECT'});		
 });
 
 //get product description
